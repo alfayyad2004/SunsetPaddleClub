@@ -901,6 +901,36 @@ h1, h2, h3 {
         height: 40px;
     }
     
+    .booking-card {
+        padding: 1.5rem;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .option-btn {
+        padding: 0.8rem 0.2rem;
+    }
+    
+    .option-btn strong {
+        font-size: 0.95rem;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .slot-btn {
+        padding: 0.8rem;
+    }
+    
     .hero-title {
         font-size: 2.8rem;
     }

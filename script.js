@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Force video autoplay on mobile
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        video.muted = true; // Ensure muted is set for autoplay
+        video.play().catch(e => console.log("Autoplay blocked:", e));
+    });
+
     // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     
