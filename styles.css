@@ -28,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -883,6 +884,14 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+    .container, .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .nav-links {
         display: none; /* simple hidden for mobile mock */
     }
