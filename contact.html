@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sunset Paddle Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar" class="glass-nav scrolled">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none; display:flex; gap:4px; align-items: center;">
+                    <div class="logo-img"></div>
+                    <span class="logo-text">Sunset Paddle Club</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">The Vibe</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html" style="color: var(--gold);">Contact</a>
+            </div>
+            <a href="book.html" class="btn btn-outline">Book a Court</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container text-center fade-up">
+            <h1 class="page-title">Get in <span class="text-gold">Touch</span>.</h1>
+            <p class="page-subtitle">We're here to help you get on the court.</p>
+        </div>
+    </div>
+
+    <section class="section pt-0">
+        <div class="container section-grid">
+            <div class="content-block slide-right">
+                <div class="glass-card contact-info-card">
+                    <h3 class="mb-2">Club Details</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Location</strong>
+                            <p class="text-muted">325 Ramnarine Avenue<br>Exchange, Couva<br>Trinidad & Tobago</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>WhatsApp / Phone</strong>
+                            <p class="text-muted">868-688-3360</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>Hours</strong>
+                            <p class="text-muted">Open Daily<br>6:00 AM - 9:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-left">
+                <form class="glass-card contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Mock)');">
+                    <h3 class="mb-2">Send a Message</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="4" required placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full mt-1">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-img"></div>
+                    <span class="logo-text">Sunset Paddle Club</span>
+                </div>
+                <p class="footer-desc">Trinidad's finest indoor pickleball experience.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <a href="index.html">Home</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="book.html">Book a Court</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Visit Us</h3>
+                <p>325 Ramnarine Avenue<br>Exchange, Couva</p>
+                <p>Open Daily 6am-9:30pm</p>
+                <p>+1 (868) 688-3360</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sunset Paddle Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

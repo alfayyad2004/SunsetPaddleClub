@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Court | Sunset Paddle Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar" class="glass-nav scrolled">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none; display:flex; gap:4px; align-items: center;">
+                    <div class="logo-img"></div>
+                    <span class="logo-text">Sunset Paddle Club</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">The Vibe</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="book.html" class="btn btn-primary" style="color: #000;">Book a Court</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container text-center fade-up">
+            <h1 class="page-title">Reserve Your <span class="text-gold">Court</span>.</h1>
+            <p class="page-subtitle">Evening slots fill fast! Reserve early to secure your time.</p>
+        </div>
+    </div>
+
+    <section class="section pt-0">
+        <div class="container booking-container fade-up delay-1">
+            <div class="glass-card booking-card">
+                <div class="booking-header">
+                    <h3>Select a Time</h3>
+                    <p class="text-muted">Bookings are managed via WhatsApp (868-688-3360)</p>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day">
+                        <div class="day-name">Today</div>
+                        <div class="time-slots">
+                            <button class="slot-btn" data-time="06:00 AM">06:00 AM</button>
+                            <button class="slot-btn" data-time="08:00 AM">08:00 AM</button>
+                            <button class="slot-btn" data-time="04:00 PM">04:00 PM</button>
+                            <button class="slot-btn" data-time="05:30 PM">05:30 PM</button>
+                            <button class="slot-btn" data-time="07:00 PM">07:00 PM</button>
+                            <button class="slot-btn" data-time="08:30 PM">08:30 PM</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-footer">
+                    <div class="selected-time-display">
+                        Select a time slot to continue
+                    </div>
+                    <button id="whatsapp-book-btn" class="btn btn-primary btn-large" disabled>
+                        Book via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-large">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-img"></div>
+                    <span class="logo-text">Sunset Paddle Club</span>
+                </div>
+                <p class="footer-desc">Trinidad's finest indoor pickleball experience.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <a href="index.html">Home</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="book.html">Book a Court</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Visit Us</h3>
+                <p>325 Ramnarine Avenue<br>Exchange, Couva</p>
+                <p>Open Daily 6am-9:30pm</p>
+                <p>+1 (868) 688-3360</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sunset Paddle Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
