@@ -36,20 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Booking Logic
     const slotBtns = document.querySelectorAll('.slot-btn');
+    const optionBtns = document.querySelectorAll('.option-btn');
     const whatsappBtn = document.getElementById('whatsapp-book-btn');
     const timeDisplay = document.querySelector('.selected-time-display');
     let selectedTime = null;
 
     if (slotBtns && whatsappBtn && timeDisplay) {
+        
+        // Handle Options Buttons (Courts & Dates)
+        optionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const parent = btn.closest('.options-grid');
+                parent.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Handle Time Slots
         slotBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active from all
-                slotBtns.forEach(b => b.classList.remove('selected'));
-                // Add active to clicked
-                btn.classList.add('selected');
+                slotBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
                 
                 selectedTime = btn.dataset.time;
-                timeDisplay.textContent = `Selected: Today at ${selectedTime}`;
+                timeDisplay.textContent = `Selected: ${selectedTime}`;
                 timeDisplay.classList.add('active');
                 
                 whatsappBtn.disabled = false;
@@ -59,10 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
         whatsappBtn.addEventListener('click', () => {
             if (!selectedTime) return;
             
-            const phoneNumber = '18686883360'; // Without plus sign
-            const message = encodeURIComponent(`Hi Sunset Paddle Club! I would like to book a court for Today at ${selectedTime}.`);
+            // Get selected court and date for the WhatsApp message
+            const grids = document.querySelectorAll('.options-grid');
+            let courtStr = "Court 1";
+            let dateStr = "Today";
             
-            // Open WhatsApp link
+            if(grids.length >= 2) {
+                const courtBtn = grids[0].querySelector('.option-btn.active');
+                const dateBtn = grids[1].querySelector('.option-btn.active');
+                if(courtBtn) courtStr = courtBtn.textContent.trim();
+                if(dateBtn) dateStr = dateBtn.querySelector('span') ? dateBtn.querySelector('span').textContent : dateBtn.textContent.trim();
+            }
+
+            const phoneNumber = '18686883360';
+            const message = encodeURIComponent(`Hi Sunset Paddle Club! I would like to book ${courtStr} for ${dateStr} at ${selectedTime}.`);
+            
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         });
     }
